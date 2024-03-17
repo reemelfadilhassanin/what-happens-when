@@ -18,6 +18,27 @@ Read this in `简体中文`_ (simplified Chinese), `日本語`_ (Japanese), `한
 (Korean) and `Spanish`_. NOTE: these have not been reviewed by the alex/what-happens-when
 maintainers.
 
+what happen when press google.com:
+-------------------------------      
+When you enter www.google.com into your browser's address bar and hit Enter, a cascade of behind-the-scenes actions unfolds to fetch and display the requested web page.
+
+Firstly, your browser initiates a Domain Name System (DNS) request, asking a DNS server to translate the human-readable domain name "www.google.com" into the corresponding numerical IP address that identifies Google's servers on the internet. The DNS server responds with the IP address.
+
+Once armed with the IP address, your browser establishes a Transmission Control Protocol/Internet Protocol (TCP/IP) connection with Google's server. This connection forms the pathway for data exchange between your browser and the server.
+
+Before allowing the connection, the server may verify the source of the request for security reasons. This check is typically performed by a firewall, which acts as a gatekeeper, monitoring and controlling incoming and outgoing network traffic.
+
+If the website utilizes HTTPS (Hypertext Transfer Protocol Secure), which provides an extra layer of security, your browser will initiate a secure connection using SSL (Secure Sockets Layer) or TLS (Transport Layer Security) encryption. This encryption ensures that any data transmitted between your browser and the server remains confidential and protected from eavesdropping.
+
+Google's servers, being accustomed to handling immense traffic, utilize a load balancer to evenly distribute incoming requests across multiple servers. This prevents any single server from becoming overwhelmed and ensures efficient request processing.
+
+Once the load balancer assigns a server, it employs a web server (such as Apache or Nginx) to handle the request. The web server retrieves the requested resource, such as an HTML file, and transmits it back to your browser.
+
+In some cases, the requested resource may necessitate further processing before being sent to your browser. This is where an application server enters the picture. The application server executes server-side code, like PHP or Python, to dynamically generate the requested resource.
+
+Should the requested resource rely on data from a database, such as search results, the application server interacts with the database to fetch the required data. Subsequently, the application server combines this data with other elements to form the final resource, which is then transmitted back to your browser for display.
+
+In essence, the journey from typing www.google.com to seeing the search page involves a complex orchestration of DNS requests, secure connections, load balancing, server-side processing, and database interactions. Each step plays a crucial role in ensuring the seamless delivery of the requested web content.
 Table of Contents
 ====================
 
@@ -38,6 +59,8 @@ popular searches from the internet as a whole. As you are typing
 "google.com" many blocks of code run and the suggestions will be refined
 with each keypress. It may even suggest "google.com" before you finish typing
 it.
+
+
 
 The "enter" key bottoms out
 ---------------------------
